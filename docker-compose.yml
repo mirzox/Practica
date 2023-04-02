@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  web:
+    image: "practica:latest"
+    volumes:
+      - /home/mirzoxid/develop/media:/data/django/media
+      - /home/mirzoxid/develop/backup:/data/django/backup
+
+    ports:
+      - 9001:8000
+    env_file:
+      - prod.env
+
+    networks:
+        practica_net:
+
+  db:
+    image: postgres:14-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=contest_root
+      - POSTGRES_PASSWORD=contestqzwxecrvtbynum
+      - POSTGRES_DB=contest_db
+      - POSTGRES_INITDB_ARGS="--auth-host=scram-sha-256"
+
+
+    networks:
+      practica_net:
+
+volumes:
+  postgres_data:
+
+networks:
+    practica_net:
