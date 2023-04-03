@@ -23,7 +23,7 @@ from concurs.views import index, main, reg
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('concurs.urls')),
-    path('main/', main, name="main"),
+    path('', main, name="main"),
     path('register/', index, name='register'),
     path('reg/<int:pk>/', reg, name='part')
 ]
