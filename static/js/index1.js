@@ -7,7 +7,7 @@ let num = document.getElementById('num')
 const script=document.querySelector('script[src="index.js"]')
 const fileInput = document.getElementById('file-input');
 
-const url = "http://127.0.0.1:8000/api/v1/";
+const url = "http://185.217.131.217/api/v1/";
 const urlContest = url + "contest/";
 const urlCommand = url + "command/";
 const urlParticipant = url + 'participant/'

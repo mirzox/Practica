@@ -1,6 +1,6 @@
 
-const url = "http://127.0.0.1:8000/api/v1";
-const url1 = "http://127.0.0.1:8000/"
+const url = "http://185.217.131.217/api/v1";
+const url1 = ""
 const urlContest = url + "/contest/";
 
 const getRequest = (urlRequest, url404) => {
