@@ -26,5 +26,6 @@ urlpatterns = [
     path('main/', main, name="main"),
     path('register/', index, name='register'),
     path('reg/<int:pk>/', reg, name='part')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root='/home/mirzoxid/PycharmProjects/Practica/staticfiles')
+]
+#               + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# urlpatterns += static(settings.STATIC_URL, document_root='/home/mirzoxid/PycharmProjects/Practica/staticfiles')
