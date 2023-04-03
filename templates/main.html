@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Международный конкурс "TaxIn Tashkent 2023"</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome-free/css/all.min.css' %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="{% static 'assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'assets/dist/css/adminlte.min.css' %}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  
+</head>
+<body class="hold-transition login-page col-12 ">
+<div class="col-xl-6 col-lg-8 col-md-9 col-sm-10 my-5 py-5" style="">
+  <!-- /.login-logo -->
+  
+  <div class="card ">
+    <img  class="w-100" alt="" id="main_img">
+      <div class=" px-4 header-text">
+        <h3 class="text-center py-3 form-title" id="main_text"></h3>
+      </div>
+      <div class="logos mx-4  d-flex justify-content-between align-items-center" id="register_but">
+        <div >
+          <img class="logo"  src="{%  static 'img/logo.png' %}" alt="">
+          <img class="logo-fiskal"  src="{%  static 'img/logo-fiskal.png' %}" alt="">
+        </div>
+
+      </div>
+
+    <div class="card-body login-card-body mt-2 justify-content-center" id="contest_reigster">
+
+        </div>
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'assets/dist/js/adminlte.min.js' %}"></script>
+
+
+<!--<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>-->
+<script>
+  feather.replace()
+</script>
+
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

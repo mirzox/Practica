@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env(
     DEBUG=(bool, False)
 )
-environ.Env.read_env('develop.env')
+environ.Env.read_env('prod.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -164,6 +164,7 @@ STATIC_URL = '/stz/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = env("MEDIA_ROOT")
 BACKUP_ROOT = env("BACKUP_ROOT")
+STATICFILES_DIRS = ['static']
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

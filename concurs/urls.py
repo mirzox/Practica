@@ -10,4 +10,5 @@ router.register("participant", ParticipantsView, basename="participant")
 
 urlpatterns = [
     path('', include(router.urls)),
+
 ]

@@ -18,7 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from concurs.views import index, main, reg
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('concurs.urls'))
+    path('api/v1/', include('concurs.urls')),
+    path('main/', main, name="main"),
+    path('register/', index, name='register'),
+    path('reg/<int:pk>/', reg, name='part')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root='/home/mirzoxid/PycharmProjects/Practica/staticfiles')

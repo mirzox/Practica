@@ -3,12 +3,13 @@ from django.core.validators import MinValueValidator, MaxValueValidator, MinLeng
 from django.utils.html import mark_safe
 from django.dispatch import receiver
 from django.db.models.signals import pre_save, post_delete, post_save
+from random import randint
 
 
 def file_dir_path(instance, filename):
     extension = filename.split('.')[-1]
     # print(instance.p_id)
-    new_filename = f"photos/{instance.p_id}-{instance.command_id}.{extension}"
+    new_filename = f"photos/{instance.p_id}-{randint(1000000, 999999999)}.{extension}"
     return new_filename
 
 

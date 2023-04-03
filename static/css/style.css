@@ -1,0 +1,89 @@
+.form-label{
+    font-weight: 500;
+    color: #2C3345;
+    font-size: 16px !important;
+}
+.sub-label{
+    color: #57647E !important;
+    font-size: 12px !important;
+    font-weight: 400;
+
+}
+.card{
+    border-radius:3px;
+}
+.form-title{
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: #2C3345;
+}
+.mail-seccess {
+    text-align: center;
+	background: #fff;
+	border-top: 1px solid #eee;
+}
+.mail-seccess .success-inner {
+	display: inline-block;
+}
+.mail-seccess .success-inner h1 {
+	font-size: 100px;
+	text-shadow: 3px 5px 2px #3333;
+	color: #006DFE;
+	font-weight: 700;
+}
+.mail-seccess .success-inner h1 span {
+	display: block;
+	font-size: 25px;
+	color: #333;
+	font-weight: 600;
+	text-shadow: none;
+	margin-top: 20px;
+}
+.mail-seccess .success-inner p {
+	padding: 20px 15px;
+}
+.mail-seccess .success-inner .btn{
+	color:#fff;
+}
+.header-text{
+	border-bottom:1px solid #eee;
+}
+.form-subtitle{
+	font-size: 22px;
+	color: #333;
+	font-weight: 500;
+}
+.form-subtitle{
+
+	border-top:1px solid #eee;
+}
+.logo{
+	width:  25%;
+}
+.logo-fiskal{
+	width: 20%; margin-left:5px;
+}
+.download-btn{
+	    width: 45% ;
+	    margin:0 auto;
+}
+@media (max-width: 575.98px){
+	.card-body .row{
+		flex-direction: column;
+	}
+	.form-title{
+		font-size: 19px;
+	}
+	.form-subtitle{
+		font-size: 19px;
+	}
+	.logo, .logo-fiskal{
+		width: 45%;
+	}
+	.download-btn{
+	    width: 70% ;
+	    margin:0 auto;
+	}
+}
+

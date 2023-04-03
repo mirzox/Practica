@@ -117,3 +117,4 @@ dmypy.json
 /backup
 develop.env
 prod.env
+db.sqlite3

@@ -1,0 +1,256 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <section class="main" id="team_from">
+    <h1 id="title"></h1>
+
+        <div class="container">
+{#             <form action = "" method = "post">#}
+{#                        {% csrf_token %}#}
+{#                        {{form }}#}
+{#            <input type="submit" value=Submit">#}
+{#             </form>#}
+            <div class="form">
+                <form id="form1" action="" method="post" class="">
+                    {% csrf_token %}
+                    <div class="block_form">
+                        <div class="header_form">
+
+                            <div class="tag_form">
+                                Регистрация команды:
+                            </div>
+                        </div>
+                    </div>
+{#                    {% for i in form %}#}
+{#                        <div class="block_form">#}
+{#                        <div class="header_form">#}
+{#                            <div class="tag_form">#}
+{#                                {{ i }}#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <div class="input_form place_input">#}
+{#                                {{ i }}#}
+{#                                {% if errors.i %}#}
+{#                                    <div class="alert alert-danger">#}
+{#                                        {{ errors.i }}#}
+{#                                    </div>#}
+{#                                {% endif %}#}
+{#                                <input required type="email" id="c_mail" placeholder="wirte email" data-id="c_mail">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <hr class="form_hr">#}
+{##}
+{#                    </div>#}
+{#                    {% endfor %}#}
+
+
+                    <div class="block_form">
+                        <div class="header_form">
+                            <div class="tag_form">
+                                Электронная почта представителя (вузовский адрес):
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input_form place_input">
+                                {{ form.mail }}
+                                {% if errors.mail %}
+                                    <div class="alert alert-danger">
+                                        {{ errors.mail }}
+                                    </div>
+                                {% endif %}
+{#                                <input required type="email" id="c_mail" placeholder="wirte email" data-id="c_mail">#}
+                            </div>
+                        </div>
+                        <hr class="form_hr">
+
+                    </div>
+
+                    <!-- textInput -->
+                    <div class="block_form">
+                        <div class="header_form">
+
+                            <div class="tag_form">
+                                Название команды
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input_form place_input">
+                                {{ form.name }}
+                                {% if errors.name %}
+                                    <div class="alert alert-danger">
+                                        {{ errors.name }}
+                                    </div>
+                                {% endif %}
+{#                                <input required type="text" placeholder="Девиз команды:" data-id="motto">#}
+                            </div>
+                        </div>
+                        <hr class="form_hr">
+                    </div>
+                    <div class="block_form">
+                        <div class="header_form">
+
+                            <div class="tag_form">
+                                Девиз команды:
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input_form place_input">
+                                    {{ form.motto }}
+                                {% if errors.motto %}
+                                    <div class="alert alert-danger">
+                                        {{ errors.motto }}
+                                    </div>
+                                {% endif %}
+
+{#                                <input required type="text" placeholder="Девиз команды:" data-id="motto">#}
+                            </div>
+                        </div>
+                        <hr class="form_hr">
+                    </div>
+
+                    <!-- number sel ect in -->
+                    <div class="block_form" id="num_form">
+                        <div class="header_form">
+                            <div class="tag_form">
+                                Состав команды (2-5):
+                            </div>
+                            </div>
+                            <div>
+                                <div class="input_form">
+                                    {{ form.m_count }}
+                                    {% if errors.m_count %}
+                                    <div class="alert alert-danger">
+                                        {{ errors.m_count }}
+                                    </div>
+                                {% endif %}
+{#                                    <input id="num" class="number_count" required type="number" min="2" max="5"#}
+{#                                        maxlength="1" data-id="m_count">#}
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr class="form_hr">
+
+                        <!-- person name -->
+                        <div class="block_form">
+                            <div class="header_form">
+                                <div class="tag_form">
+                                    ФИО консультанта (Должность, ученая степень)
+                                </div>
+                            </div>
+                            <div>
+                                <div class="input_form place_input">
+                                    {{ form.consult }}
+                                    {% if errors.consult %}
+                                    <div class="alert alert-danger">
+                                        {{ errors.consult }}
+                                    </div>
+                                {% endif %}
+{#                                    <input required type="text"#}
+{#                                        placeholder="ФИО консультанта (Должность, ученая степень)" data-id="name">#}
+                                </div>
+                            </div>
+                            <hr class="form_hr">
+                        </div>
+
+                        <!-- passport -->
+                        <div class="block_form">
+                            <div class="header_form">
+                                <div class="tag_form">
+                                    Паспортные данные (серия, номер)
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="input_form place_input">
+                                    {{ form.passport }}
+                                    {% if errors.passport %}
+                                    <div class="alert alert-danger">
+                                        {{ errors.passport }}
+                                    </div>
+                                {% endif %}
+{#                                    <input required type="text" placeholder="AB" maxlength="9" minlength="9"#}
+{#                                        data-id="passport">#}
+                                    <!-- <input required type="number" placeholder="123456789" max="9999999" min="1000000"> -->
+                                </div>
+                            </div>
+                            <hr class="form_hr">
+                        </div>
+
+                        <!-- mail -->
+                        <div class="block_form">
+                            <div class="header_form">
+                                <div class="tag_form">
+                                    Электронная почта:
+                                </div>
+                            </div>
+                            <div>
+                                <div class="input_form place_input">
+                                    {{ form.c_mail }}
+                                      {% if errors.c_mail %}
+                                    <div class="alert alert-danger">
+                                        {{ errors.c_mail }}
+                                    </div>
+                                {% endif %}
+{#                                    <input required type="email" placeholder="wirte email" data-id="mail">#}
+                                </div>
+
+                            </div>
+                            <hr class="form_hr">
+                        </div>
+
+                        <!-- tel -->
+                        <div class="block_form">
+                            <div class="header_form">
+
+                                <div class="tag_form">
+                                    Мобильный телефон:
+                                </div>
+                            </div>
+                            <div>
+                                <div class="input_form place_input">
+                                    {{ form.phone }}
+
+                                   {% if errors.phone %}
+                                    <div class="alert alert-danger">
+                                        {{ errors.phone }}
+                                    </div>
+                                {% endif %}
+{#                                    <input required type="tel" placeholder="Мобильный телефон:" data-id="phone">#}
+                                </div>
+                            </div>
+                            <hr class="form_hr">
+                        </div>
+                            {% csrf_token %}
+                    <input  class="form_send" type="submit" value="Submit">
+                         </form>
+{#                    <input class="form_send" type="submit" value="Send">#}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+{#    <script src="{% static 'js/index1.js' %}"></script>#}
+</body>
+
+</html>
